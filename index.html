@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{text-align: center;}
+        td{text-align: center;}
+    </style>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <form>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Amount</th>
+                        <th>Number</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>100</td>
+                    <td><input type="number" id="number_100" class="form-control"></td>
+                    <td id="total_100">0</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td><input type="number" id="number_50"class="form-control"></td>
+                    <td id="total_50">0</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td><input type="number" id="number_20"class="form-control"></td>
+                    <td id="total_20">0</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><input type="number" id="number_10"class="form-control"></td>
+                    <td id="total_10">0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input type="number" id="number_5"class="form-control"></td>
+                    <td id="total_5">0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input type="number" id="number_2"class="form-control"></td>
+                    <td id="total_2">0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><input type="number" id="number_1"class="form-control"></td>
+                    <td id="total_1">0</td>
+                </tr>
+                <tr>
+                    <td>0.25</td>
+                    <td><input type="number" id="number_025"class="form-control"></td>
+                    <td id="total_025">0</td>
+                </tr>
+                <tr>
+                    <td>0.10</td>
+                    <td><input type="number" id="number_010"class="form-control"></td>
+                    <td id="total_010">0</td>
+                </tr>
+                <tr>
+                    <td>0.05</td>
+                    <td><input type="number" id="number_005"class="form-control"></td>
+                    <td id="total_005">0</td>
+                </tr>
+                <tr>
+                    <td>Roll 25</td>
+                    <td><input type="number" id="roll_25"class="form-control"></td>
+                    <td id="total_25">0</td>
+                </tr>
+                <tr>
+                    <td>Roll 10</td>
+                    <td><input type="number" id="roll_10"class="form-control"></td>
+                    <td id="rolltotal_10">0</td>
+                </tr>
+                <tr>
+                    <td>Roll 5</td>
+                    <td><input type="number" id="roll_5"class="form-control"></td>
+                    <td id="rolltotal_5">0</td>
+                </tr>
+                <tr>
+                    <td>Roll 2</td>
+                    <td><input type="number" id="roll_2"class="form-control"></td>
+                    <td id="rolltotal_2">0</td>
+                </tr>
+                <tr>
+                    <td colspan="2">TOTAL</td>
+                    <td id="total">0</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button type="button" onclick="Calculate()" class="btn btn-primary" style="width: 100%;">Calculate</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function Calculate()
+        {
+            number_100 = document.getElementById("number_100").value
+            value_100 = number_100*100
+            document.getElementById("total_100").innerHTML = value_100
+
+            number_50 = document.getElementById("number_50").value
+            value_50 = number_50 * 50
+            document.getElementById("total_50").innerHTML = value_50
+
+            number_20 = document.getElementById("number_20").value
+            value_20= number_20 * 20
+            document.getElementById("total_20").innerHTML = value_20
+
+            number_10 = document.getElementById("number_10").value
+            value_10 = number_10 * 10
+            document.getElementById("total_10").innerHTML = value_10
+
+            number_5 = document.getElementById("number_5").value
+            value_5 = number_5 * 5
+            document.getElementById("total_5").innerHTML = value_5
+            
+            number_2 = document.getElementById("number_2").value
+            value_2 = number_2 * 2
+            document.getElementById("total_2").innerHTML = value_2
+
+            number_1 = document.getElementById("number_1").value
+            value_1 = number_1 * 1
+            document.getElementById("total_1").innerHTML = value_1
+
+            number_025 = document.getElementById("number_025").value
+            value_025 = number_025*0.25
+            document.getElementById("total_025").innerHTML = value_025
+
+            number_010 = document.getElementById("number_010").value
+            value_010 = number_010 * 0.10
+            document.getElementById("total_010").innerHTML = value_010
+
+            number_005 = document.getElementById("number_005").value
+            value_005 = number_005 * 0.05
+            document.getElementById("total_005").innerHTML = value_005
+            
+            roll_25 = document.getElementById("roll_25").value
+            value_25 = roll_25 * 25
+            document.getElementById("total_25").innerHTML = value_25
+
+            roll_10 = document.getElementById("roll_10").value
+            rollvalue_10 = roll_10 * 10
+            document.getElementById("rolltotal_10").innerHTML = rollvalue_10
+
+            roll_5 = document.getElementById("roll_5").value
+            rollvalue_5 = roll_5 * 5
+            document.getElementById("rolltotal_5").innerHTML = rollvalue_5
+
+            roll_2 = document.getElementById("roll_2").value
+            rollvalue_2 = roll_2 * 2
+            document.getElementById("rolltotal_2").innerHTML = rollvalue_2
+
+            document.getElementById("total").innerHTML = value_100 + value_50 + value_20 + value_10 + value_5 + value_2 + value_1 + value_025 + value_010 + value_005 + value_25 + rollvalue_10 + rollvalue_5 +rollvalue_2
+        }
+    </script>
+</body>
+</html>
